@@ -1,26 +1,53 @@
-# L03HandsOn
-Decision Making Hands-On
+# L04HandsOn
+Object-Oriented Programming in JavaScript
 
 Requirements
-Part 1
-Create a switch..case statement to check against highSchoolGrade within the switch statement. Then, within the case statements, set yourGrade to the appropriate string. Add your switch..case code to the provided updateGrade() function:
+All JavaScript code should live within the script.js file.
 
-in case 9, assign "Freshman" to the yourGrade variable
-in case 10, assign "Sophomore" to the yourGrade variable
-in case 11, assign "Junior" to the yourGrade variable
-in case 12, assign "Senior" to the yourGrade variable
-include a default case that assigns "Invalid" to yourGrade.
-Part 2
-Convert the following if..else into a ternary within the provided name() function. Don't forget to continue to use the document.getElementById() statements within the if..else blocks.
+Step 1
+Add the following starter code to your script.js file:
 
 script.js file:
 
-function name() {
-  let firstName;
-  if (firstName === "John") {
-    document.getElementById("demo").innerHTML = "Hello John!";
+class Employee {
+  constructor(name, salary, hireDate) {
+    this.name = name;
+    this.salary = salary;
+    this.hireDate = hireDate;
   }
-  else {
-    document.getElementById("demo").innerHTML = "Hello Human!";
+  getName() {
+    console.log(this.name.toUpperCase());
+  }
+  getSalary() {
+    console.log(this.salary);
+  }
+  getHireDate() {
+    console.log(this.hireDate);
   }
 }
+Step 2
+Create three new subclasses that inherit from the Employee parent class above:
+Manager
+Designer
+SalesAssociate
+Add the following methods to the noted subclasses:
+Add the method jobDescription() to the Manager subclass
+Add the method yearsExperience() to the Designer subclass
+Add the method degreeCompleted() to the SalesAssociate subclass
+Each new subclass should use a constructor and the super method
+The Manager subclass constructor will need a new parameter: descriptionOfJob
+The Designer subclass constructor will need a new parameter: experience
+The SalesAssociate subclass constructor will need a new parameter: degrees
+The following methods should console.log the specified sentences:
+jobDescription() should console.log a sentence that provides the person's name, hire date, salary and their job description
+yearsExperience() should console.log a sentence that provides the person's name, hire date, salary and their years of experience
+degreeCompleted() should console.log a sentence that provides the person's name, hire date, salary and the degree they have completed
+Tip!
+Use the `this` keyword within the console.logs
+
+Create one new instance of each subclass (three instances total) to define the parameters located within the constructors.
+This is where the console.logs within the methods will be given actual information to console.log
+Each new instance should include a name, a hire date, and a salary along with the appropriate last parameter (descriptionOfJob, experience, or degree)
+An example of the end result would be "Donna was hired on 3/22/17 and makes 80000 because she manages the sales staff"
+Lastly, using each of the new instances, call each of the methods that live within the respective subclasses so you can see each of the console.logs in your console.
+Use the http-server to run this project
