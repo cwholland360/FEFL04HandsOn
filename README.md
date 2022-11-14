@@ -25,6 +25,7 @@ class Employee {
     console.log(this.hireDate);
   }
 }
+
 Step 2
 Create three new subclasses that inherit from the Employee parent class above:
 Manager
